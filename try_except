@@ -1,0 +1,8 @@
+while True:
+    try:
+        a = int(input("Введите число:"))
+        b = int(input("Введите число:"))
+    except ValueError:
+        print('Нужно ввести число!')
+    else:
+        print(f'Ответ:{a + b}')
