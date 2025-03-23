@@ -1,0 +1,36 @@
+my_dict = {'Name': 'Rustam','Age':28, 'City': 'Saint-Petersburg','Ocuppation': 'IT' }
+my_dict.update({'Age':29})  # Измените значение существующего ключа.
+my_dict.update({'Country':'Russia'}) # Добавьте новый ключ-значение.
+
+print(my_dict.get('Name')) # возвращает значение по ключу
+print(my_dict.keys())
+print(my_dict.values())
+print(my_dict.items()) # Получите список ключей и значений.
+my_dict.pop('Ocuppation') # удаляет ключ и возвращает его значение
+# my_dict.popitem()
+# my_dict.clear() #  очищает словарь
+print('Occupation' in my_dict) # Проверьте наличие ключа в словаре.
+
+# my_dict.copy() # создает поверхностную копию словаря.
+
+for key, value in my_dict.items():
+    print(f'{key}:{value}\n')
+
+
+
+default_value = 'unknown'
+new_dict1 = dict.fromkeys(my_dict, default_value) # создает новый словарь с default значением
+print(new_dict1)
+
+new_dict2 = dict.fromkeys(my_dict)  # Значения по умолчанию - None
+print(new_dict2)
+
+def find(self, word):
+    dict_1 = {}
+    for name, words in self.get_all_words().items():
+        if word.lower() in words:
+            index_ = words.index(word)
+            dict_1[self.file_names] = index_
+            return dict_1
+
+        dictionary_name[key] = value
